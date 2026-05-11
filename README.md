@@ -3,12 +3,12 @@
 <p>
   <img alt="Swift 6" src="https://img.shields.io/badge/Swift-6-orange.svg" />
   <img alt="iOS 17+" src="https://img.shields.io/badge/iOS-17%2B-0A84FF.svg" />
-  <img alt="macOS 14+" src="https://img.shields.io/badge/macOS-14%2B-000000.svg" />
-  <img alt="tvOS 17+" src="https://img.shields.io/badge/tvOS-17%2B-5C2D91.svg" />
-  <img alt="visionOS 1+" src="https://img.shields.io/badge/visionOS-1%2B-444444.svg" />
+  <img alt="macOS 14+" src="https://img.shields.io/badge/macOS-14%2B-0A84FF.svg" />
+  <img alt="tvOS 17+" src="https://img.shields.io/badge/tvOS-17%2B-0A84FF.svg" />
+  <img alt="visionOS 1+" src="https://img.shields.io/badge/visionOS-1%2B-0A84FF.svg" />
   <br>
   <a href="https://x.com/rafa_b_g">
-    <img alt="X/Twitter" src="https://img.shields.io/badge/X-%40rafa__b__g-111111.svg" />
+    <img alt="X/Twitter" src="https://img.shields.io/badge/X%2FTwitter-%40rafa__b__g-111111.svg" />
   </a>
 </p>
 
