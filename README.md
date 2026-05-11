@@ -2,6 +2,8 @@
 
 A SwiftUI library that adds paper-like visual effects to views using Metal shaders.
 
+<img alt="Banner" src="https://github.com/user-attachments/assets/64368017-f56c-4d3b-b046-60a568a57d8d" />
+
 ## Requirements
 
 - iOS 17+
