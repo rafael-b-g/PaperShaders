@@ -44,3 +44,7 @@ YourView()
 
 > [!TIP]
 > You can adjust the effects with optional parameters inside each modifier.
+
+## Demo
+
+This repository also includes `PaperShadersDemo`, a small **(and very fun)** demo app for previewing the shaders and tweaking their parameters.
