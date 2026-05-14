@@ -1,7 +1,7 @@
 # PaperShaders
 
 <p>
-  <img alt="Swift 6" src="https://img.shields.io/badge/Swift-6-orange.svg" />
+  <img alt="Platforms" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Frafael-b-g%2FPaperShaders%2Fbadge%3Ftype%3Dswift-versions" />
   <img alt="iOS 17+" src="https://img.shields.io/badge/iOS-17%2B-0A84FF.svg" />
   <img alt="macOS 14+" src="https://img.shields.io/badge/macOS-14%2B-0A84FF.svg" />
   <img alt="tvOS 17+" src="https://img.shields.io/badge/tvOS-17%2B-0A84FF.svg" />
