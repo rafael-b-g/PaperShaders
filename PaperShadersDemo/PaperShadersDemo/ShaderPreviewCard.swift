@@ -7,7 +7,6 @@ struct ShaderPreviewCard: View {
 
     var body: some View {
         PreviewSurface()
-            .drawingGroup()
             .modifier(
                 PreviewShaderEffects(
                     textureSettings: textureSettings,

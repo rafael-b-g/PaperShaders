@@ -13,7 +13,7 @@ private enum PaperShaderLibrary {
 }
 
 extension View {
-    /// Adds paper-like grain to the view.
+    /// Adds a paper-like grain overlay to the view.
     ///
     /// Use `color1` and `color2` to control the color of the grains.
     /// Increase `density` for more visible texture. Adjust `scale` to make the grains
@@ -39,17 +39,25 @@ extension View {
         gain: CGFloat = 0.56,
         octaves: Int = 3
     ) -> some View {
-        colorEffect(
-            PaperShaderLibrary.library.paperTexture(
-                .color(color1),
-                .color(color2),
-                .float(density),
-                .float(scale),
-                .float(lacunarity),
-                .float(gain),
-                .float(Float(octaves))
-            )
-        )
+        self
+            .overlay {
+                // This shape determines the mask of the effect (currently fixed to a rectangle)
+                Rectangle()
+                    .foregroundStyle(.black)
+                    .allowsHitTesting(false)
+                    .colorEffect(
+                        PaperShaderLibrary.library.paperTexture(
+                            .color(color1),
+                            .color(color2),
+                            .float(density),
+                            .float(scale),
+                            .float(lacunarity),
+                            .float(gain),
+                            .float(Float(octaves))
+                        )
+                    )
+                    .ignoresSafeArea()
+            }
     }
 
     /// Adds a subtle distortion to the view, replicating ink on paper.

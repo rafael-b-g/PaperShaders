@@ -10,13 +10,6 @@
 using namespace metal;
 
 
-half4 blendColors(half4 baseColor, half4 overlayColor) {
-    half oneMinusOverlayAlpha = 1.0h - overlayColor.a;
-    half3 blendedRGB = overlayColor.rgb + baseColor.rgb * oneMinusOverlayAlpha;
-    half blendedAlpha = overlayColor.a + baseColor.a * oneMinusOverlayAlpha;
-    return half4(blendedRGB, blendedAlpha);
-}
-
 float hash12(float2 p) {
     float3 p3  = fract(float3(p.xyx) * 0.7137);
     p3 += dot(p3, p3.yzx + 37.206);
@@ -163,6 +156,10 @@ half4 paperTexture(
     float fbmGain,
     float fbmOctaveCount
 ) {
+    if (currentColor.a == 0) {
+        return half4(0);
+    }
+    
     float seed = 7.0;
     float2 seedOffsetScale = float2(17.33, 31.58);
     
@@ -172,10 +169,10 @@ half4 paperTexture(
     float value = fbm(p, fbmLacunarity, fbmGain, fbmOctaveCount);
     
     if (value >= 1 - (density / 2)) {
-        return blendColors(currentColor, color1);
+        return color1;
     } else if (value <= density / 2) {
-        return blendColors(currentColor, color2);
+        return color2;
     } else {
-        return currentColor;
+        return half4(0);
     }
 }
